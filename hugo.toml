@@ -1,3 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://dfghj.de'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+theme = 'archie'
