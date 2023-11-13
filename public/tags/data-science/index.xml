@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data science on Alex&#39; Blog</title>
+    <link>https://dfghj.de/tags/data-science/</link>
+    <description>Recent content in data science on Alex&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Aug 2017 04:16:40 +0000</lastBuildDate>
+    <atom:link href="https://dfghj.de/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run Jupyter Notebooks as a Service on macOS</title>
+      <link>https://dfghj.de/run-jupyter-notebooks-as-a-service-on-macos/</link>
+      <pubDate>Thu, 31 Aug 2017 04:16:40 +0000</pubDate>
+      <guid>https://dfghj.de/run-jupyter-notebooks-as-a-service-on-macos/</guid>
+      <description>I was looking for a way to run jupyer notebook without using a constantly open terminal or a screen session. On macOS there is a way to create services using a .plist file and the launchctl command.
+Because I use different environments for all Python related stuff, it wasn’t immediately clear to me how to do this when I’ve installed Jupyter only in a pyenv. After some fiddling around, I finally solved it.</description>
+    </item>
+  </channel>
+</rss>

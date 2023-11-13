@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>LaMetric Firmware 1.6.0 and local push - Alex&#39; Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="UPDATE (08.08.2016): Apparently you can get your api key at https://developer.lametric.com/user/devices now.
+With the LaMetric Time Firmware update 1.6.0 the API for local push notifications changed and my tutorial for the 1.5.0 firmware does’t work anymore. The new firmware offers the possibility to show notifications without installing an extra app." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="LaMetric Firmware 1.6.0 and local push" />
+<meta property="og:description" content="UPDATE (08.08.2016): Apparently you can get your api key at https://developer.lametric.com/user/devices now.
+With the LaMetric Time Firmware update 1.6.0 the API for local push notifications changed and my tutorial for the 1.5.0 firmware does’t work anymore. The new firmware offers the possibility to show notifications without installing an extra app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dfghj.de/lametric-firmware-1-6-0-and-local-push/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-07-17T20:25:28+00:00" />
+<meta property="article:modified_time" content="2016-07-17T20:25:28+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LaMetric Firmware 1.6.0 and local push"/>
+<meta name="twitter:description" content="UPDATE (08.08.2016): Apparently you can get your api key at https://developer.lametric.com/user/devices now.
+With the LaMetric Time Firmware update 1.6.0 the API for local push notifications changed and my tutorial for the 1.5.0 firmware does’t work anymore. The new firmware offers the possibility to show notifications without installing an extra app."/>
+
+	
+        <link href="https://dfghj.de/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://dfghj.de/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+		
+		
+		<link rel="stylesheet" type="text/css" href="https://dfghj.de/css/carousel.7246d67ed223552bcaacc5e2e16718046d961485b18484de18ab08df89eb9988.css">
+		
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://dfghj.de">Alex&#39; Blog</a>
+	</div>
+	<nav>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">LaMetric Firmware 1.6.0 and local push</h1>
+			<div class="meta">Posted on Jul 17, 2016</div>
+		</div>
+		
+
+		<section class="body">
+			<p><strong>UPDATE (08.08.2016): Apparently you can get your api key at <!-- raw HTML omitted --><a href="https://developer.lametric.com/user/devices">https://developer.lametric.com/user/devices</a><!-- raw HTML omitted --> now.</strong></p>
+<p>With the <!-- raw HTML omitted -->LaMetric Time Firmware update 1.6.0<!-- raw HTML omitted --> the API for local push notifications changed and <!-- raw HTML omitted -->my tutorial for the 1.5.0 firmware<!-- raw HTML omitted --> does’t work anymore. The new firmware offers the possibility to show notifications without installing an extra app.</p>
+<p>For this to work you have to create an “notifications app” in the developer backend. This is similar to creating the old apps, but you don’t have to add it to your LaMetric Time. Go to the developer backend and create a new notifications app. Choose a name, enter a short description and set the redirect url to a dummy domain – e.g. <a href="http://dfgdgddfdfg.de">http://dfgdgddfdfg.de</a> (in this case, it doesn’t really matter, because we use this only for ourself). Then click “Save” and your app is ready. Get the “Client ID” from the info page of the app.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>To communicate with the LaMetric Time in a local network we need the api key. With the 1.6.0 firmware this has to be obtained by getting an access token via OAuth2. With your client id at hand open the following URL in a browser after replacing the CLIENT-ID with your client id.</p>
+<!-- raw HTML omitted -->
+<p>This should open a website, asking you if you want to authorize your new app to access your LaMetric account. Click “ALLOW” and you should be redirected to the redirect url you entered before. If you used facebook.com, you probably see an error messsage, 404 site not found, but that’s ok. We’re only interested in the current URL – this should look like</p>
+<!-- raw HTML omitted -->
+<p>Copy the access token part from the url – in the example above it’s “xyz”. Using this access token we can get the api key from our LaMetric Time with the following php script – again, replace the CLIENT-ID with your <!-- raw HTML omitted -->client-id<!-- raw HTML omitted --><strong>access token</strong> from before. Make sure you run this script shortly after getting the access token, since it expires after few minutes.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The result should look like</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The two important parts are the api_key and the ipv4_internal. With those two things we can send notifications directly to the LaMetric Time. To use the api key, it has to be prefixed by “dev:” and the whole string needs to be base64 encoded – if you don’t know what this means, don’t worry, it’s easy to do:</p>
+<ol>
+<li>api key from above: 123123123</li>
+<li>new api key with prefix: dev:123123123</li>
+<li>Copy the whole string and paste it on <!-- raw HTML omitted --><a href="https://www.base64encode.org">https://www.base64encode.org</a><!-- raw HTML omitted --> and click “ENCODE”: ZGV2OjEyMzEyMzEyMw==</li>
+</ol>
+<p>This is your api key you need to use whenever you interact with the LaMetric Time. Using the following script you can see all available api endpoints on your device – meaning all the things you can interact with.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The output of this script looks like</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>To sent a notification use the following script as an example:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>When you run this script, you should see a “Hello” notification that stays until you hit the Action button. To get more information about notifications (e.g. setting sound) have a look at the new <!-- raw HTML omitted -->documentation for firmware 1.6.0<!-- raw HTML omitted -->.</p>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/lametric">LaMetric</a></li>
+					
+					<li><a href="/tags/php">PHP</a></li>
+					
+					<li><a href="/tags/tutorial">Tutorial</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2023  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+</div>
+    </body>
+</html>

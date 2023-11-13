@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Run Jupyter Notebooks as a Service on macOS - Alex&#39; Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="I was looking for a way to run jupyer notebook without using a constantly open terminal or a screen session. On macOS there is a way to create services using a .plist file and the launchctl command.
+Because I use different environments for all Python related stuff, it wasn’t immediately clear to me how to do this when I’ve installed Jupyter only in a pyenv. After some fiddling around, I finally solved it." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Run Jupyter Notebooks as a Service on macOS" />
+<meta property="og:description" content="I was looking for a way to run jupyer notebook without using a constantly open terminal or a screen session. On macOS there is a way to create services using a .plist file and the launchctl command.
+Because I use different environments for all Python related stuff, it wasn’t immediately clear to me how to do this when I’ve installed Jupyter only in a pyenv. After some fiddling around, I finally solved it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dfghj.de/run-jupyter-notebooks-as-a-service-on-macos/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-08-31T04:16:40+00:00" />
+<meta property="article:modified_time" content="2017-08-31T04:16:40+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Run Jupyter Notebooks as a Service on macOS"/>
+<meta name="twitter:description" content="I was looking for a way to run jupyer notebook without using a constantly open terminal or a screen session. On macOS there is a way to create services using a .plist file and the launchctl command.
+Because I use different environments for all Python related stuff, it wasn’t immediately clear to me how to do this when I’ve installed Jupyter only in a pyenv. After some fiddling around, I finally solved it."/>
+
+	
+        <link href="https://dfghj.de/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://dfghj.de/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+		
+		
+		<link rel="stylesheet" type="text/css" href="https://dfghj.de/css/carousel.7246d67ed223552bcaacc5e2e16718046d961485b18484de18ab08df89eb9988.css">
+		
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://dfghj.de">Alex&#39; Blog</a>
+	</div>
+	<nav>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Run Jupyter Notebooks as a Service on macOS</h1>
+			<div class="meta">Posted on Aug 31, 2017</div>
+		</div>
+		
+
+		<section class="body">
+			<p>I was looking for a way to run <!-- raw HTML omitted --><!-- raw HTML omitted -->jupyer notebook<!-- raw HTML omitted --><!-- raw HTML omitted --> without using a constantly open terminal or a screen session. On macOS there is a way to create services using a .plist file and the <a href="http://www.launchd.info">launchctl</a> command.</p>
+<p>Because I use different environments for all Python related stuff, it wasn’t immediately clear to me how to do this when I’ve installed Jupyter only in a <a href="https://github.com/pyenv/pyenv">pyenv</a>. After some fiddling around, I finally solved it. The key was to set the working directory parameter to the directory in which the environment is loaded. In my case this is <code>~/notebooks</code> where I <a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-local">automatically load the env by using a <code>.python-version</code> file</a>.</p>
+<p>Below you find the .plist file, that enables you to start/stop the notebook server using <code>launchctl &lt;start|stop&gt; local.jupyter.notebook</code>.</p>
+<p>It assumes that you have a Python environenment in <code>/Users/USERNAME/notebooks</code>. So simply change it to your needs. Put the file into <code>/Users/USERNAME/Library/LaunchAgents</code> and call <code>launchctl load PATH_TO_FILE</code> once to load it. After this you can start/stop the service as described above.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34; &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;plist</span> <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;1.0&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dict&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>Disabled<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;false/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>KeepAlive<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;false/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>Label<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;string&gt;</span>local.jupyter.notebook<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>ProgramArguments<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;array&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;string&gt;</span>/Users/USERNAME/.pyenv/shims/jupyter<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;string&gt;</span>notebook<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;string&gt;</span>--notebook-dir<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;string&gt;</span>/Users/USERNAME/notebooks<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;string&gt;</span>--no-browser<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/array&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>StandardErrorPath<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;string&gt;</span>/Users/USERNAME/Library/LaunchAgents/jupyter-notebook.stderr<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>StandardOutPath<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;string&gt;</span>/Users/USERNAME/Library/LaunchAgents/jupyter-notebook.stdout<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>WorkingDirectory<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;string&gt;</span>/Users/USERNAME/notebooks<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dict&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/plist&gt;</span>
+</span></span></code></pre></div>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/data-science">data science</a></li>
+					
+					<li><a href="/tags/jupyter">Jupyter</a></li>
+					
+					<li><a href="/tags/macos">macOS</a></li>
+					
+					<li><a href="/tags/notebook">notebook</a></li>
+					
+					<li><a href="/tags/pyenv">pyenv</a></li>
+					
+					<li><a href="/tags/python">Python</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2023  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+</div>
+    </body>
+</html>

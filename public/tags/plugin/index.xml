@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plugin on Alex&#39; Blog</title>
+    <link>https://dfghj.de/tags/plugin/</link>
+    <description>Recent content in plugin on Alex&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2017 13:23:47 +0000</lastBuildDate>
+    <atom:link href="https://dfghj.de/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QuickFolders – a BitBar plugin</title>
+      <link>https://dfghj.de/quickfolders-a-bitbar-plugin/</link>
+      <pubDate>Fri, 10 Feb 2017 13:23:47 +0000</pubDate>
+      <guid>https://dfghj.de/quickfolders-a-bitbar-plugin/</guid>
+      <description>I’m a big fan of BitBar, an application that allows you to “Put anything in your Mac OS X menu bar” (macOS nowadays). People have already created more than 250 plugins which allow you to show plenty of information in the menubar. Basically any script that can be executed on the terminal and has some kind of output can be used to display this output.
+This is how my BitBar output looks at the moment:</description>
+    </item>
+  </channel>
+</rss>

@@ -1,4 +1,9 @@
 baseURL = 'https://dfghj.de'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Alex' Blog"
 theme = 'archie'
+
+
+[params]
+    useCDN=false
+    customcss = ["css/carousel.css"]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logging on Alex&#39; Blog</title>
+    <link>https://dfghj.de/tags/logging/</link>
+    <description>Recent content in logging on Alex&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Jul 2016 07:21:38 +0000</lastBuildDate>
+    <atom:link href="https://dfghj.de/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Log your played iTunes tracks</title>
+      <link>https://dfghj.de/log-your-played-itunes-tracks/</link>
+      <pubDate>Sun, 24 Jul 2016 07:21:38 +0000</pubDate>
+      <guid>https://dfghj.de/log-your-played-itunes-tracks/</guid>
+      <description>A few days ago I was looking for a way to log all tracks that I listen to in iTunes. Something like Last.fm but that works local and for macOS. I did a quick search and couldn’t find anything (maybe there is something already). So I decided to built something simple on my own using AppleScript, which allows me to easily access the iTunes information I need.
+Doing some research I found an article at Doug’s AppleScripts that described the problem I wanted to solve.</description>
+    </item>
+  </channel>
+</rss>
