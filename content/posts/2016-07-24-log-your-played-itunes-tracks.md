@@ -3,7 +3,7 @@ title: Log your played iTunes tracks
 author: Alex
 type: posts
 date: 2016-07-24T07:21:38+00:00
-url: /log-your-played-itunes-tracks/
+url: /posts/log-your-played-itunes-tracks/
 categories:
   - Tutorial
 tags:

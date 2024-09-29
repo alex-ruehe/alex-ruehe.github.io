@@ -3,7 +3,7 @@ title: QuickFolders – a BitBar plugin
 author: Alex
 type: posts
 date: 2017-02-10T13:23:47+00:00
-url: /quickfolders-a-bitbar-plugin/
+url: /posts/quickfolders-a-bitbar-plugin/
 categories:
   - Article
 tags:

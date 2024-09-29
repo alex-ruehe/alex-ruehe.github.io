@@ -3,7 +3,7 @@ title: 'LaMetric & local push'
 author: Alex
 type: posts
 date: 2016-03-03T18:55:08+00:00
-url: /lametric-local-push/
+url: /posts/lametric-local-push/
 categories:
   - Tutorial
 tags:

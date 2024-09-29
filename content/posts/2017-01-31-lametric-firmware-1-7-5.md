@@ -3,7 +3,7 @@ title: LaMetric Firmware 1.7.5
 author: Alex
 type: posts
 date: 2017-01-31T22:37:29+00:00
-url: /lametric-firmware-1-7-5/
+url: /posts/lametric-firmware-1-7-5/
 categories:
   - Article
 tags:

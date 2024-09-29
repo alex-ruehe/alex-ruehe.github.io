@@ -3,7 +3,7 @@ title: Run Jupyter Notebooks as a Service on macOS
 author: Alex
 type: posts
 date: 2017-08-31T04:16:40+00:00
-url: /run-jupyter-notebooks-as-a-service-on-macos/
+url: /posts/run-jupyter-notebooks-as-a-service-on-macos/
 categories:
   - Tutorial
 tags:

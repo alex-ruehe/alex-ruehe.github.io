@@ -3,7 +3,7 @@ title: 'Review: Bragi – The Dash'
 author: Alex
 type: posts
 date: 2016-09-06T10:13:02+00:00
-url: /review-bragi-the-dash/
+url: /posts/review-bragi-the-dash/
 featured_image: /wp-content/uploads/2016/09/bragi_dash_black-e1473156872973.jpg
 categories:
   - Review

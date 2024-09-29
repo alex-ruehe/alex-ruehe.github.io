@@ -3,7 +3,7 @@ title: Show Download and Upload speed on your LaMetric Time
 author: Alex
 type: posts
 date: 2017-02-06T13:13:57+00:00
-url: /show-download-and-upload-speed-on-your-lametric-time/
+url: /posts/show-download-and-upload-speed-on-your-lametric-time/
 categories:
   - Tutorial
 tags:

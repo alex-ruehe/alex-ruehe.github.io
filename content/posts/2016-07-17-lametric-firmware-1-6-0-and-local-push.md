@@ -3,7 +3,7 @@ title: LaMetric Firmware 1.6.0 and local push
 author: Alex
 type: posts
 date: 2016-07-17T20:25:28+00:00
-url: /lametric-firmware-1-6-0-and-local-push/
+url: /posts/lametric-firmware-1-6-0-and-local-push/
 categories:
   - Tutorial
 tags:

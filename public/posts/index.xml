@@ -1,75 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Alex&#39; Blog</title>
-    <link>https://dfghj.de/posts/</link>
-    <description>Recent content in Posts on Alex&#39; Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 31 Aug 2017 04:16:40 +0000</lastBuildDate>
-    <atom:link href="https://dfghj.de/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Run Jupyter Notebooks as a Service on macOS</title>
-      <link>https://dfghj.de/run-jupyter-notebooks-as-a-service-on-macos/</link>
-      <pubDate>Thu, 31 Aug 2017 04:16:40 +0000</pubDate>
-      <guid>https://dfghj.de/run-jupyter-notebooks-as-a-service-on-macos/</guid>
-      <description>I was looking for a way to run jupyer notebook without using a constantly open terminal or a screen session. On macOS there is a way to create services using a .plist file and the launchctl command.
-Because I use different environments for all Python related stuff, it wasn’t immediately clear to me how to do this when I’ve installed Jupyter only in a pyenv. After some fiddling around, I finally solved it.</description>
-    </item>
-    <item>
-      <title>QuickFolders – a BitBar plugin</title>
-      <link>https://dfghj.de/quickfolders-a-bitbar-plugin/</link>
-      <pubDate>Fri, 10 Feb 2017 13:23:47 +0000</pubDate>
-      <guid>https://dfghj.de/quickfolders-a-bitbar-plugin/</guid>
-      <description>I’m a big fan of BitBar, an application that allows you to “Put anything in your Mac OS X menu bar” (macOS nowadays). People have already created more than 250 plugins which allow you to show plenty of information in the menubar. Basically any script that can be executed on the terminal and has some kind of output can be used to display this output.
-This is how my BitBar output looks at the moment:</description>
-    </item>
-    <item>
-      <title>Show Download and Upload speed on your LaMetric Time</title>
-      <link>https://dfghj.de/show-download-and-upload-speed-on-your-lametric-time/</link>
-      <pubDate>Mon, 06 Feb 2017 13:13:57 +0000</pubDate>
-      <guid>https://dfghj.de/show-download-and-upload-speed-on-your-lametric-time/</guid>
-      <description>Following a request at the LaMetric forum I wrote a small Python script for displaying your current download and upload speed on a LaMetric Time. The script can run on your own laptop or server (preferred).
-Basically you need to do two things:
-Create an app for the LaMetric Time run the script that performs the speed test and push the results to the device 1. Create an indicator app This is quite an easy thing to do.</description>
-    </item>
-    <item>
-      <title>LaMetric Firmware 1.7.5</title>
-      <link>https://dfghj.de/lametric-firmware-1-7-5/</link>
-      <pubDate>Tue, 31 Jan 2017 22:37:29 +0000</pubDate>
-      <guid>https://dfghj.de/lametric-firmware-1-7-5/</guid>
-      <description>A new firmware for the LaMetric Time is out – version 1.7.5 has some nice things to offer for those of us who would like to use the device in home automation (sadly the documentation is not yet updated). While this has been announced in the change log for 1.7.4, there have been some bugs and there are still one or two things that needs fixing, but that’s just minor stuff.</description>
-    </item>
-    <item>
-      <title>Review: Bragi – The Dash</title>
-      <link>https://dfghj.de/review-bragi-the-dash/</link>
-      <pubDate>Tue, 06 Sep 2016 10:13:02 +0000</pubDate>
-      <guid>https://dfghj.de/review-bragi-the-dash/</guid>
-      <description>&lt;p&gt;For nearly six months now I’ve been using &lt;!-- raw HTML omitted --&gt;The Dash&lt;!-- raw HTML omitted --&gt; as my sole earbuds. Before that I used the headphones Apple delivered with whatever iPhone I owned and I was quite happy with it – so you can see, that I don’t care that much about audio quality. I’ve tried high-end headphones but for me it’s not worth the money, simply because I didn’t hear that big of a difference. YMMV. This applies to everything in the review – it is deliberately subjective and I can’t promise that you will have the same experience but I think I can give you a good overview. If you are an athelete or music enthusiast who wants to know if the Dash is worth it, I’ll probably disappoint you – since I’m neither I probably don’t value the things that are important for you very much.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Log your played iTunes tracks</title>
-      <link>https://dfghj.de/log-your-played-itunes-tracks/</link>
-      <pubDate>Sun, 24 Jul 2016 07:21:38 +0000</pubDate>
-      <guid>https://dfghj.de/log-your-played-itunes-tracks/</guid>
-      <description>A few days ago I was looking for a way to log all tracks that I listen to in iTunes. Something like Last.fm but that works local and for macOS. I did a quick search and couldn’t find anything (maybe there is something already). So I decided to built something simple on my own using AppleScript, which allows me to easily access the iTunes information I need.
-Doing some research I found an article at Doug’s AppleScripts that described the problem I wanted to solve.</description>
-    </item>
-    <item>
-      <title>LaMetric Firmware 1.6.0 and local push</title>
-      <link>https://dfghj.de/lametric-firmware-1-6-0-and-local-push/</link>
-      <pubDate>Sun, 17 Jul 2016 20:25:28 +0000</pubDate>
-      <guid>https://dfghj.de/lametric-firmware-1-6-0-and-local-push/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;UPDATE (08.08.2016): Apparently you can get your api key at &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://developer.lametric.com/user/devices&#34;&gt;https://developer.lametric.com/user/devices&lt;/a&gt;&lt;!-- raw HTML omitted --&gt; now.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;With the &lt;!-- raw HTML omitted --&gt;LaMetric Time Firmware update 1.6.0&lt;!-- raw HTML omitted --&gt; the API for local push notifications changed and &lt;!-- raw HTML omitted --&gt;my tutorial for the 1.5.0 firmware&lt;!-- raw HTML omitted --&gt; does’t work anymore. The new firmware offers the possibility to show notifications without installing an extra app.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LaMetric &amp; local push</title>
-      <link>https://dfghj.de/lametric-local-push/</link>
-      <pubDate>Thu, 03 Mar 2016 18:55:08 +0000</pubDate>
-      <guid>https://dfghj.de/lametric-local-push/</guid>
-      <description>&lt;p&gt;UPDATE: This doesn’t work with firmware 1.6.0 – see updated article here: &lt;a href=&#34;https://blog.aruehe.io/lametric-firmware-1-6-0-and-local-push/&#34;&gt;LaMetric Firmware 1.6.0 and local push&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;With the latest firmware upgrade (1.50) the &lt;!-- raw HTML omitted --&gt;LaMetric&lt;!-- raw HTML omitted --&gt; finally got support for local push – allowing you to sent messages to the LaMetric without needing an internet connection. Because some people in the support forums asked how to use local push I decided to write a tutorial (I do this on OS X).&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Alex' Blog</title><link>http://localhost:1313/posts/</link><description>Recent content in Posts on Alex' Blog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 29 Sep 2024 20:49:33 +0200</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Using one bpython with multiple virtual environments</title><link>http://localhost:1313/posts/bpython-with-multiple-virtual-environments/</link><pubDate>Sun, 29 Sep 2024 20:49:33 +0200</pubDate><guid>http://localhost:1313/posts/bpython-with-multiple-virtual-environments/</guid><description>&lt;p>I finally realized that I should change the default Python REPL. There are many REPLs that offer a much better experience—&lt;a href="https://ipython.org/">ipython&lt;/a>, &lt;a href="https://bpython-interpreter.org/">bpython&lt;/a>, and &lt;a href="https://github.com/prompt-toolkit/ptpython">ptpython&lt;/a> are probably the most well-known. In the past, I used ipython because I worked on many projects that involved Jupyter notebooks, so it came essentially for free whenever I installed the necessary packages.&lt;/p>
+&lt;p>However, in recent years, I&amp;rsquo;ve been working on a lot of projects that don&amp;rsquo;t rely on Jupyter, meaning ipython wasn’t installed by default. This meant I always had to manually install it in any virtual environment where I wanted to use it—which I didn’t like, as I prefer to keep only project-specific dependencies in a virtual environment.&lt;/p></description></item><item><title>Run Jupyter Notebooks as a Service on macOS</title><link>http://localhost:1313/posts/run-jupyter-notebooks-as-a-service-on-macos/</link><pubDate>Thu, 31 Aug 2017 04:16:40 +0000</pubDate><guid>http://localhost:1313/posts/run-jupyter-notebooks-as-a-service-on-macos/</guid><description>&lt;p>I was looking for a way to run &lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->jupyer notebook&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted --> without using a constantly open terminal or a screen session. On macOS there is a way to create services using a .plist file and the &lt;a href="http://www.launchd.info">launchctl&lt;/a> command.&lt;/p>
+&lt;p>Because I use different environments for all Python related stuff, it wasn’t immediately clear to me how to do this when I’ve installed Jupyter only in a &lt;a href="https://github.com/pyenv/pyenv">pyenv&lt;/a>. After some fiddling around, I finally solved it. The key was to set the working directory parameter to the directory in which the environment is loaded. In my case this is &lt;code>~/notebooks&lt;/code> where I &lt;a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-local">automatically load the env by using a &lt;code>.python-version&lt;/code> file&lt;/a>.&lt;/p></description></item><item><title>QuickFolders – a BitBar plugin</title><link>http://localhost:1313/posts/quickfolders-a-bitbar-plugin/</link><pubDate>Fri, 10 Feb 2017 13:23:47 +0000</pubDate><guid>http://localhost:1313/posts/quickfolders-a-bitbar-plugin/</guid><description>&lt;p>I’m a big fan of &lt;!-- raw HTML omitted -->BitBar&lt;!-- raw HTML omitted -->, an application that allows you to “Put anything in your Mac OS X menu bar” (macOS nowadays). People have already created more than 250 plugins which allow you to show plenty of information in the menubar. Basically any script that can be executed on the terminal and has some kind of output can be used to display this output.&lt;/p></description></item><item><title>Show Download and Upload speed on your LaMetric Time</title><link>http://localhost:1313/posts/show-download-and-upload-speed-on-your-lametric-time/</link><pubDate>Mon, 06 Feb 2017 13:13:57 +0000</pubDate><guid>http://localhost:1313/posts/show-download-and-upload-speed-on-your-lametric-time/</guid><description>&lt;p>Following a request at the LaMetric forum I wrote a small Python script for displaying your current download and upload speed on a LaMetric Time. The script can run on your own laptop or server (preferred).&lt;/p>
+&lt;p>Basically you need to do two things:&lt;/p>
+&lt;ul>
+&lt;li>Create an app for the LaMetric Time&lt;/li>
+&lt;li>run the script that performs the speed test and push the results to the device&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-create-an-indicator-app">1. Create an indicator app&lt;/h4>
+&lt;p>This is quite an easy thing to do. You need an account for the &lt;!-- raw HTML omitted -->LaMetric developer area&lt;!-- raw HTML omitted --> (it’s free, so don’t worry). In the developer area you can create a new app – in this case select indicator application.&lt;/p></description></item><item><title>LaMetric Firmware 1.7.5</title><link>http://localhost:1313/posts/lametric-firmware-1-7-5/</link><pubDate>Tue, 31 Jan 2017 22:37:29 +0000</pubDate><guid>http://localhost:1313/posts/lametric-firmware-1-7-5/</guid><description>&lt;p>A new firmware for the LaMetric Time is out – &lt;a href="http://firmware.lametric.com">version 1.7.5&lt;/a> has some nice things to offer for those of us who would like to use the device in home automation (sadly the documentation is not yet updated). While this has been announced in the change log for 1.7.4, there have been some bugs and there are still one or two things that needs fixing, but that’s just minor stuff.&lt;/p></description></item><item><title>Review: Bragi – The Dash</title><link>http://localhost:1313/posts/review-bragi-the-dash/</link><pubDate>Tue, 06 Sep 2016 10:13:02 +0000</pubDate><guid>http://localhost:1313/posts/review-bragi-the-dash/</guid><description>&lt;p>For nearly six months now I’ve been using &lt;!-- raw HTML omitted -->The Dash&lt;!-- raw HTML omitted --> as my sole earbuds. Before that I used the headphones Apple delivered with whatever iPhone I owned and I was quite happy with it – so you can see, that I don’t care that much about audio quality. I’ve tried high-end headphones but for me it’s not worth the money, simply because I didn’t hear that big of a difference. YMMV. This applies to everything in the review – it is deliberately subjective and I can’t promise that you will have the same experience but I think I can give you a good overview. If you are an athelete or music enthusiast who wants to know if the Dash is worth it, I’ll probably disappoint you – since I’m neither I probably don’t value the things that are important for you very much.&lt;/p></description></item><item><title>Log your played iTunes tracks</title><link>http://localhost:1313/posts/log-your-played-itunes-tracks/</link><pubDate>Sun, 24 Jul 2016 07:21:38 +0000</pubDate><guid>http://localhost:1313/posts/log-your-played-itunes-tracks/</guid><description>&lt;p>A few days ago I was looking for a way to log all tracks that I listen to in iTunes. Something like &lt;!-- raw HTML omitted -->Last.fm&lt;!-- raw HTML omitted --> but that works local and for macOS. I did a quick search and couldn’t find anything (maybe there is something already). So I decided to built something simple on my own using AppleScript, which allows me to easily access the iTunes information I need.&lt;/p></description></item><item><title>LaMetric Firmware 1.6.0 and local push</title><link>http://localhost:1313/posts/lametric-firmware-1-6-0-and-local-push/</link><pubDate>Sun, 17 Jul 2016 20:25:28 +0000</pubDate><guid>http://localhost:1313/posts/lametric-firmware-1-6-0-and-local-push/</guid><description>&lt;p>&lt;strong>UPDATE (08.08.2016): Apparently you can get your api key at &lt;!-- raw HTML omitted -->&lt;a href="https://developer.lametric.com/user/devices">https://developer.lametric.com/user/devices&lt;/a>&lt;!-- raw HTML omitted --> now.&lt;/strong>&lt;/p>
+&lt;p>With the &lt;!-- raw HTML omitted -->LaMetric Time Firmware update 1.6.0&lt;!-- raw HTML omitted --> the API for local push notifications changed and &lt;!-- raw HTML omitted -->my tutorial for the 1.5.0 firmware&lt;!-- raw HTML omitted --> does’t work anymore. The new firmware offers the possibility to show notifications without installing an extra app.&lt;/p></description></item><item><title>LaMetric &amp; local push</title><link>http://localhost:1313/posts/lametric-local-push/</link><pubDate>Thu, 03 Mar 2016 18:55:08 +0000</pubDate><guid>http://localhost:1313/posts/lametric-local-push/</guid><description>&lt;p>UPDATE: This doesn’t work with firmware 1.6.0 – see updated article here: &lt;a href="https://blog.aruehe.io/lametric-firmware-1-6-0-and-local-push/">LaMetric Firmware 1.6.0 and local push&lt;/a>&lt;/p>
+&lt;p>With the latest firmware upgrade (1.50) the &lt;!-- raw HTML omitted -->LaMetric&lt;!-- raw HTML omitted --> finally got support for local push – allowing you to sent messages to the LaMetric without needing an internet connection. Because some people in the support forums asked how to use local push I decided to write a tutorial (I do this on OS X).&lt;/p></description></item></channel></rss>
