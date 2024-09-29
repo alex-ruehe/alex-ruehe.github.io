@@ -10,10 +10,23 @@ pygmentscodefencesguesssyntax = true
 [pagination]
 pagerSize = 5
 
+
+
+[[params.social]]
+name = "email"
+icon = "mail"
+url = "mailto:contact@aruehe.io"
+
 [[params.social]]
 name = "GitHub"
 icon = "github"
 url = "https://github.com/alex-ruehe"
+
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://linkedin.com/in/alexanderruehe"
 
 
 [[menu.main]]
@@ -22,13 +35,13 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
-url = "/posts"
+name = "CV"
+url = "https://aruehe.io"
 weight = 2
 
 [[menu.main]]
-name = "CV"
-url = "https://aruehe.io"
+name = "All posts"
+url = "/posts"
 weight = 3
 
 [[menu.main]]
