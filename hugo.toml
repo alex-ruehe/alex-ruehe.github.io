@@ -27,6 +27,11 @@ url = "/posts"
 weight = 2
 
 [[menu.main]]
+name = "CV"
+url = "https://aruehe.io"
+weight = 3
+
+[[menu.main]]
 name = "Tags"
 url = "/tags"
 weight = 4
